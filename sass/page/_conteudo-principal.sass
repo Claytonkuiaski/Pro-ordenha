@@ -1,0 +1,178 @@
+
+main
+	min-height: 630px	
+	background:
+		image: url('../images/fundo-conteudo.png')
+		repeat: no-repeat
+		position: top center
+		size: cover
+		width: 100%
+		height: 100%
+	margin-top: -350px
+	.conteudo-principal
+		h3 
+			+make-sm-column(4)
+			+make-sm-column-offset(3)
+			color: $verde
+			p 
+				text-indent: 40px
+		h4	
+			+make-sm-column(12)
+			text-indent: 420px
+			color: $preto
+		+breakpoint($tablet)
+			h3,
+			h4
+				+make-sm-column(12)
+				text-align: center
+				text-indent: 0px
+				margin-left: 0px
+		+breakpoint($celubot)
+			margin-top: 400px		
+							
+	.vaca 
+		+make-sm-column(3)	
+		img
+			margin-top: -320px
+			margin-left: -80px
+			width: 350px
+		+breakpoint($tablet)
+			+make-sm-column(12)	
+			img 
+				+img-responsive
+				margin: 0 auto
+	.beneficio1,
+	.beneficio2,
+	.beneficio3
+		+make-sm-column(3)
+		img 
+			width: 40px
+		h2 	
+			color: $verde
+			font-size: 25px
+		h3 
+			font-size: 18px	
+		margin-top: 20px	
+		+breakpoint($tablet)
+			+make-sm-column(4)
+		+breakpoint($celubot)
+			+make-sm-column(12)
+			img 
+				width: 80px
+				margin-left: 43%
+			h2,
+			h3
+				text-align: center	
+		+breakpoint($celular)
+			img 
+				margin-left: 40%		
+
+	.copos
+		img 
+			width: 105px
+			padding: 10px
+		i 
+			img	
+				width: 100px
+				margin-top: 30px
+				padding-right: 40px
+			
+		h3 
+			color: $verde	
+			text-align: center
+	.copo1
+	.copo1,
+	.copo2,
+	.copo3,
+	.copo4
+		+make-sm-column(3)
+		img
+			+img-responsive
+			margin: 0 auto
+	.copo1
+		img 
+			margin-top: -80px	
+		+breakpoint($tablet)
+			img
+				margin-top: 50px	
+		+breakpoint($celubot)
+			img 
+				margin-top: 150px		
+	.copo2
+		img 
+			margin-top: -80px
+		+breakpoint($tablet)
+			img
+				margin-top: 50px			
+	.copo3
+		img 
+			margin-top: -80px
+		+breakpoint($tablet)
+			img
+				margin-top: 50px			
+	.copo4
+		img 
+			margin-top: -80px	
+		+breakpoint($tablet)
+			img
+				margin-top: 50px												
+	.flechas
+		margin-top: 100px
+		+make-sm-column(12)	
+		img 
+			+img-responsive
+			width: 100px
+			margin: 0 auto
+		+breakpoint($tablet)
+			display: none	
+	.flecha1,
+	.flecha2,
+	.flecha3
+		+make-sm-column(4)		
+	.flecha1
+		padding-left: 170px	
+	.flecha3
+		padding-right: 170px	
+
+
+
+.botao-cotacao,
+.botao-noticias
+	+make-sm-column(6)
+	text-align: center
+	margin-top: 50px
+	a
+		padding-top: 5px
+		padding-bottom: 5px
+		padding-left: 130px
+		padding-right: 130px	
+		font-size: 30px
+		border: solid 1px $preto
+		box-shadow: 10px 10px 20px $sombra
+		color: $preto
+		white-space: nowrap
+		&:hover
+			+transition(.4s)
+			text-decoration: none
+			background-color: $amarelo
+			color: $branco
+			border: none
+	+breakpoint($tablet)
+		+make-sm-column(12)	
+	+breakpoint($celular)	
+		a 
+			font-size: 20px	
+			padding-left: 80px
+			padding-right: 80px
+
+.botao-cotacao
+	a
+		padding-left: 80px
+		padding-right: 80px	
+		&:hover
+			background-color: $verde-escuro
+	+breakpoint($celular)	
+		a 
+			font-size: 20px	
+			padding-left: 48px
+			padding-right: 48px			
