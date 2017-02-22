@@ -3,7 +3,7 @@ body
 		font-family: open Sans
 
 .chamada-slide
-	+make-sm-column(6)
+	+make-sm-column(4)
 	h1,
 	h2, 
 	h3
@@ -30,7 +30,7 @@ body
 			font-size: 30px	
 	h3	
 		font-size: 20px
-		margin-left: 230px
+		margin-left: 200px
 		margin-top: 40px	
 		white-space: nowrap
 		+breakpoint($tablet)
@@ -40,9 +40,13 @@ body
 			font-size: 25px	
 		a
 			color: $branco
-			border: solid 1px $branco
+			border: solid 2px $branco
 			border-radius: 40px
-			padding: 8px
+			padding-top: 11px
+			padding-bottom: 11px
+			padding-left: 20px
+			padding-right: 20px 
+			font-size: 16px
 			&:hover,
 			&:focus
 				text-decoration: none
@@ -55,10 +59,16 @@ body
 
 
 .logo-slide2
-	+make-sm-column(6)		
+	+make-sm-column(8)		
 	img 
 		+img-responsive
-		width: 1000px	
-		margin: 0 auto	
+		margin-left: 150px
+		width: 600px
 		padding-top: 20px
+
+		+breakpoint($celubot)
+			+img-responsive
+			margin: 0 auto
+			padding: 0
+
 	

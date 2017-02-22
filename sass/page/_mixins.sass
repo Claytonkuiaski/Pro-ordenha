@@ -5,15 +5,23 @@ $pc: max-width 1200px
 
 $branco: #fff
 $preto: black
-$verde: #8cc63f
+$verde: #2a7143
 $verde-escuro: #39b54a
+$verde-logo: #8cc63f
 $azul: #1e285c
+$azul-claro: #3b5998
 $amarelo: #fdce12
 $sombra: #75797a
 $vermelho: red
 
 $open: 300
 $bold: 800
+
+=transition($transition...) 
+  -moz-transition:    all $transition linear
+  -o-transition:      all $transition linear
+  -webkit-transition: all $transition linear
+  transition:         all $transition linear
 
 =gradient($angle,$gradient1, $gradient2)
   background-color: $gradient2 
