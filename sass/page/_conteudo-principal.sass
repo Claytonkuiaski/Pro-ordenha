@@ -56,10 +56,13 @@ main
 	.beneficio1,
 	.beneficio2,
 	.beneficio3
-
 		+make-sm-column(3)
 		img 
 			width: 40px
+			+breakpoint($celubot)
+				width: 80px
+				+img-responsive
+				margin: 0 auto
 		h2 	
 			color: $verde-logo
 			font-size: 20px
@@ -67,7 +70,7 @@ main
 			font-size: 15px	
 			margin-top: 0px
 			color: $preto
-		span 
+		h4
 			font-size: 15px
 			margin-top: -5px
 			color: $preto
@@ -75,92 +78,105 @@ main
 		+breakpoint($tablet)
 			+make-sm-column(4)
 		+breakpoint($celubot)
-			+make-sm-column(12)
-			img 
-				width: 80px
-				margin-left: 43%
+			padding-top: 50px
+		
 			h2,
-			h3
+			h3,
+			h4
 				text-align: center	
 		+breakpoint($celular)
 			img 
 				margin-left: 40%		
 	.beneficio1
 		margin-left: 100px
+		+breakpoint($celubot)
+			margin-left: 0
+			margin-top: 20px
 	.beneficio2 
 		margin-left: -50px
+		+breakpoint($celubot)
+			margin-left: 0
 	.beneficio3	
 		margin-left: -50px
-
-
-
-
+		+breakpoint($celubot)
+			margin-left: 0
 	.copos
 		img 
-			width: 105px
-			padding: 10px
-		i 
-			img	
-				width: 100px
-				margin-top: 30px
-				padding-right: 40px
-			
-		h3 
-			color: $verde	
+			width: 120px
+			padding: 10px	
+		h3,
+		h4
+			margin-left: -30px
+			margin-top: 5px 
+			color: $verde-logo	
 			text-align: center
-	.copo1
+			font-size: 18px
+			+breakpoint($tablet)
+				margin-left: 80px
+			+breakpoint($celubot)
+				margin-left: 0	
 	.copo1,
 	.copo2,
 	.copo3,
 	.copo4
 		+make-sm-column(3)
 		img
-			+img-responsive
-			margin: 0 auto
+			margin-left: 50px
+			+breakpoint($celubot)
+				+img-responsive
+				margin: 0 auto
 	.copo1
+		margin-left: 80px
 		img 
-			margin-top: -80px	
+			margin-top: -100px	
 		+breakpoint($tablet)
+			margin-left: 0
 			img
 				margin-top: 50px	
 		+breakpoint($celubot)
 			img 
 				margin-top: 150px		
 	.copo2
+		margin-left: -50px
 		img 
-			margin-top: -80px
+			margin-top: -100px
 		+breakpoint($tablet)
+			margin-left: 0		
 			img
 				margin-top: 50px			
 	.copo3
+		margin-left: -50px
 		img 
-			margin-top: -80px
+			margin-top: -100px
 		+breakpoint($tablet)
+			margin-left: 0		
 			img
 				margin-top: 50px			
 	.copo4
+		margin-left: -50px
 		img 
-			margin-top: -80px	
+			margin-top: -100px	
 		+breakpoint($tablet)
+			margin-left: 0		
 			img
 				margin-top: 50px												
 	.flechas
 		margin-top: 100px
 		+make-sm-column(12)	
 		img 
-			+img-responsive
-			width: 100px
-			margin: 0 auto
+			width: 90px
 		+breakpoint($tablet)
 			display: none	
 	.flecha1,
 	.flecha2,
 	.flecha3
-		+make-sm-column(4)		
+		+make-sm-column(3)		
 	.flecha1
-		padding-left: 170px	
+		padding-left: 270px
+	.flecha2 
+		padding-left: 220px	
 	.flecha3
-		padding-right: 170px	
+		padding-left: 170px	
 
 
 
@@ -170,21 +186,21 @@ main
 	text-align: center
 	margin-top: 50px
 	a
+		background-color: $amarelo
 		padding-top: 5px
 		padding-bottom: 5px
 		padding-left: 130px
 		padding-right: 130px	
 		font-size: 30px
-		border: solid 1px $preto
-		box-shadow: 10px 10px 20px $sombra
-		color: $preto
+		border-radius: 4px
+		box-shadow: 10px 20px 50px $sombra
+		color: $branco
 		white-space: nowrap
 		&:hover
 			+transition(.4s)
 			text-decoration: none
-			background-color: $amarelo
+			background-color: $amarelo-escuro
 			color: $branco
-			border: none
 	+breakpoint($tablet)
 		+make-sm-column(12)	
 	+breakpoint($celular)	
@@ -194,13 +210,19 @@ main
 			padding-right: 80px
 
 .botao-cotacao
+	margin-left: -100px
 	a
+		background-color: $verde-escuro
 		padding-left: 80px
 		padding-right: 80px	
 		&:hover
-			background-color: $verde-escuro
+			background-color: $verde
+	+breakpoint($tablet)
+		margin-left: 40px	
 	+breakpoint($celular)	
 		a 
 			font-size: 20px	
 			padding-left: 48px
 			padding-right: 48px			
+.botao-noticias			
+	margin-left: 40px

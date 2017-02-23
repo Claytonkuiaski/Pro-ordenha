@@ -16,24 +16,26 @@ footer
 		+make-sm-column(12)
 		text-align: center
 		h1 	
-			margin-top: 50px
-			color: $verde
-			font-size: 35px
+			margin-top: 60px
+			color: $verde-logo
+			font-size: 30px
 			+breakpoint($celubot)
 				margin-top: 0px
 		h2 
 			color: $preto
-			font-size: 20px	
-			margin-bottom: 50px
+			font-size: 15px	
+			margin-top: 0
+		p 
+			padding-bottom: 40px
 		a 
-			padding-top: 5px
-			padding-bottom: 8px
+			padding-top: 10px
+			padding-bottom: 10px
 			padding-left: 30px
 			padding-right: 30px	
-			font-size: 30px
-			border: solid 2px $verde
+			font-size: 19px
+			border: solid 3px $verde-logo
 			border-radius: 40px
-			color: $verde
+			color: $verde-logo
 			white-space: nowrap			
 			&:hover
 				+transition(.4s)
@@ -47,32 +49,39 @@ footer
 	.endereco
 		background-color: $verde-escuro
 		width: 100%
-		height: 95px	
-		margin-top: 60px
+		height: 60px	
+		margin-top: 70px
 		p
 			text-align: center
 			color: $branco
-			padding-top: 30px
-			font-size: 25px
+			padding-top: 18px
+			font-size: 20px
 			+breakpoint($celubot)
 				font-size: 18px
 	.menu-rodape
 		ul 
 			list-style: none
-			margin-top: 70px
+			margin-top: 50px
+			margin-right: 10px
+			float: right
 			li 
 				a 
 					padding: 5px
-					color: $azul
+					color: $verde 
 					&:hover
 						text-decoration: none
 						color: $verde
+			+breakpoint($pc)
+				margin-top: -50px				
 		+breakpoint($tablet)
 			+make-sm-column(12)	
-			text-align: center			
+			ul 
+				float: none
+				text-align: center
+			margin-top: 70px		
 	.logo-rodape
 		+make-sm-column(6)
-		margin-top: 25px
+		margin-top: 20px
 		img 
 			+img-responsive
 			width: 280px
@@ -88,12 +97,14 @@ footer
 		+make-sm-column-offset(9)
 		ul 
 			margin-left: 50px
+			margin-top: -30px
+			float: right
 			li
 				display: inline 
 				list-style: none
 				i 
 					padding: 5px
-					font-size: 20px
+					font-size: 18px
 				a 
 					&:hover
 						text-decoration: none	
@@ -102,7 +113,9 @@ footer
 			margin-left: 0px	
 			text-align: center
 			ul 
-				margin-left: 0px
+				float: none
+				margin-left: 0
+				margin-top: 0
 				li 
 					i 
 						font-size: 30px	
@@ -115,20 +128,20 @@ footer
 	+make-sm-column-offset(9)
 	img 
 		width: 330px			
-		margin-top: -714px		
+		margin-top: -642px	
+		z-index: 0	
 	+breakpoint($pc)
-		margin-top: -12px	
+		margin-top: 0px	
 	+breakpoint($tablet)
 		img
-			width: 150px
-			margin-top: -150px
-			margin-left: 50px
+			display: none
 	+breakpoint($celubot)
 		display: none		
 .leite
 	+make-sm-column(3)		
 	img 
 		width: 250px	
-		margin-top: -700px	
+		margin-top: -460px	
+		margin-left: -200px
 	+breakpoint($tablet)
 		display: none	
